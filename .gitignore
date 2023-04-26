@@ -1,0 +1,6 @@
+jobs/*
+
+!jobs/README.md
+!jobs/simple-BrowserApp-job-example
+!jobs/advanced-BrowserApp-job-example
+

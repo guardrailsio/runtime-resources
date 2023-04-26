@@ -1,0 +1,59 @@
+{
+  "data": {
+    "type": "BrowserApp",
+    "attributes": {
+      "version": "0.0.1",
+      "sutAuthentication": {
+        "sitesTreeSutAuthenticationPopulationStrategy": "NoAuthentication",
+        "emissaryAuthenticationStrategy": "NoAuthentication"
+      },
+      "sutHost": "[targetdomain.com]",
+      "sutPort": 443,
+      "sutProtocol": "https",
+      "browser": "chrome"
+    },
+    "relationships": {
+      "data": [{
+        "type": "tlsScanner",
+        "id": "NA"
+      },
+      {
+        "type": "appScanner",
+        "id": "NA"
+      }]
+    }
+  },
+  "included": [
+    {
+      "type": "tlsScanner",
+      "id": "NA",
+      "attributes": {
+        "tlsScannerSeverity": "LOW",
+        "alertThreshold": 3
+      }
+    },
+    {
+      "type": "appScanner",
+      "id": "NA",
+      "attributes": {
+        "sitesTreePopulationStrategy": "WebDriverStandard",
+        "spiderStrategy": "Standard",
+        "scannersStrategy": "BrowserAppStandard",
+        "scanningStrategy": "BrowserAppStandard",
+        "postScanningStrategy": "BrowserAppStandard",
+        "reportingStrategy": "Standard",
+        "reports": {
+          "templateThemes": [{
+            "name": "traditionalJson"
+          }]
+        },
+        "aScannerAttackStrength": "HIGH",
+        "aScannerAlertThreshold": "LOW",
+        "alertThreshold": 12
+      },
+      "relationships": {
+        "data": []
+      }
+    }
+  ]
+}
