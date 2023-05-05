@@ -52,11 +52,6 @@
         "scanningStrategy": "BrowserAppStandard",
         "postScanningStrategy": "BrowserAppStandard",
         "reportingStrategy": "Standard",
-        "reports": {
-          "templateThemes": [{
-            "name": "traditionalJson"
-          }]
-        },
         "username": "[your-user]",
         "password": "[your-password]",
         "aScannerAttackStrength": "HIGH",

@@ -2,5 +2,6 @@ jobs/*
 
 !jobs/README.md
 !jobs/simple-BrowserApp-job-example
+!jobs/simple-BrowserApp-job-fast-example
 !jobs/advanced-BrowserApp-job-example
 

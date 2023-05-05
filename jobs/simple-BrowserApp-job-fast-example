@@ -47,7 +47,16 @@
         "alertThreshold": 12
       },
       "relationships": {
-        "data": []
+        "data": [{"type": "route", "id": "</my-route>"}]
+      }
+    },
+    {
+      "type": "route",
+      "id": "</my-route>",
+      "attributes": {
+        "attackFields": [],
+        "method": "GET",
+        "submit": ""
       }
     }
   ]
