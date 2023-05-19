@@ -2,7 +2,7 @@
   "data": {
     "type": "BrowserApp",
     "attributes": {
-      "version": "0.0.1",
+      "version": "0.1.0",
       "sutAuthentication": {
         "sitesTreeSutAuthenticationPopulationStrategy": "NoAuthentication",
         "emissaryAuthenticationStrategy": "NoAuthentication"
@@ -10,7 +10,14 @@
       "sutHost": "<targetdomain.com>",
       "sutPort": 443,
       "sutProtocol": "https",
-      "browser": "chrome"
+      "browser": "chrome",
+      "forwardingProxy": {
+        "protocol": "[http|https]",
+        "username": "<proxy-username>",
+        "password": "<proxy-password>",
+        "hostname": "<proxy-hostname>",
+        "port": <proxy-port>
+      }
     },
     "relationships": {
       "data": [{
