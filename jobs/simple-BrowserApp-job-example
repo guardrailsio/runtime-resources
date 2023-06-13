@@ -2,7 +2,7 @@
   "data": {
     "type": "BrowserApp",
     "attributes": {
-      "version": "0.1.0",
+      "version": "1.0.0",
       "sutAuthentication": {
         "sitesTreeSutAuthenticationPopulationStrategy": "NoAuthentication",
         "emissaryAuthenticationStrategy": "NoAuthentication"
@@ -13,8 +13,7 @@
       "browser": "chrome",
       "forwardingProxy": {
         "protocol": "[http|https]",
-        "username": "<proxy-username>",
-        "password": "<proxy-password>",
+        "authorizationBase64": "<base64-encoded-username:password>",
         "hostname": "<proxy-hostname>",
         "port": <proxy-port>
       }

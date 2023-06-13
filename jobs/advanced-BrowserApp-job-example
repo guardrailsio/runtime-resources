@@ -2,7 +2,7 @@
   "data": {
     "type": "BrowserApp",
     "attributes": {
-      "version": "0.1.0",
+      "version": "1.0.0",
       "sutAuthentication": {
         "sitesTreeSutAuthenticationPopulationStrategy": "FormStandard",
         "emissaryAuthenticationStrategy": "FormStandard",
@@ -18,8 +18,7 @@
       "browser": "chrome",
       "forwardingProxy": {
         "protocol": "[http|https]",
-        "username": "<proxy-username>",
-        "password": "<proxy-password>",
+        "authorizationBase64": "<base64-encoded-username:password>",
         "hostname": "<proxy-hostname>",
         "port": <proxy-port>
       }
@@ -59,8 +58,8 @@
         "scanningStrategy": "BrowserAppStandard",
         "postScanningStrategy": "BrowserAppStandard",
         "reportingStrategy": "Standard",
-        "username": "[your-user]",
-        "password": "[your-password]",
+        "username": "<your-user>",
+        "passwordBase64": "<your-base64-encoded-password>",
         "aScannerAttackStrength": "HIGH",
         "aScannerAlertThreshold": "LOW",
         "alertThreshold": 12
@@ -82,8 +81,8 @@
         "scanningStrategy": "BrowserAppStandard",
         "postScanningStrategy": "BrowserAppStandard",
         "reportingStrategy": "Standard",
-        "username": "[admin-user]",
-        "password": "[admin-password]"
+        "username": "<admin-user>",
+        "passwordBase64": "<base64-encoded-admin-password>"
       },
       "relationships": {
         "data": [{
