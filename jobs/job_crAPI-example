@@ -1,0 +1,66 @@
+{
+  "data": {
+    "type": "Job",
+    "attributes": {
+      "version": "2.0.0",
+      "sutAuthentication": {
+        "emissaryAuthenticationStrategy": "MaintainJwtJsonBasedBespokeCrApi",
+        "route": "/identity/api/auth/login",
+        "usernameFieldLocater": "email",
+        "passwordFieldLocater": "password"
+      },
+      "sutHost": "<targetdomain.com>",
+      "sutPort": 443,
+      "sutProtocol": "https",
+      "loggedOutIndicator": "\\b(Unauthorized|Forbidden|Invalid Token)\\b",
+      "forwardingProxy": {
+        "protocol": "[http|https]",
+        "authorizationBase64": "<base64-encoded-username:password>",
+        "hostname": "<proxy-hostname>",
+        "port": <proxy-port>
+      }
+    },
+    "relationships": {
+      "data": [{
+        "type": "tlsScanner",
+        "id": "NA"
+      },
+      {
+        "type": "appScanner",
+        "id": "noUser1"
+      }]
+    }
+  },
+  "included": [
+    {
+      "type": "tlsScanner",
+      "id": "NA",
+      "attributes": {
+        "tlsScannerSeverity": "LOW"
+      }
+    },
+    {
+      "type": "appScanner",
+      "id": "noUser1",
+      "attributes": {
+        "sitesTreePopulationStrategy": "OpenApi",
+        "spiderStrategy": "Standard",
+        "scannersStrategy": "ApiStandard",
+        "scanningStrategy": "ApiStandard",
+        "postScanningStrategy": "ApiStandard",
+        "reportingStrategy": "Standard",
+        "username": "<your-user>",
+        "passwordBase64": "<your-base64-encoded-password>",
+        "openApi": {
+          "importFileContentBase64": "<your-base64-encoded-openapi-spec>"
+        },
+        "aScannerAttackStrength": "MEDIUM",
+        "aScannerAlertThreshold": "LOW",
+        "excludedRoutes": [
+          "^.*change-email.*$",
+          "^.*reset-password.*$"
+        ]
+      }
+    }
+  ]
+}

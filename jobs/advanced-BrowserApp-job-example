@@ -1,8 +1,8 @@
 {
   "data": {
-    "type": "BrowserApp",
+    "type": "Job",
     "attributes": {
-      "version": "1.0.0",
+      "version": "2.0.0",
       "sutAuthentication": {
         "sitesTreeSutAuthenticationPopulationStrategy": "FormStandard",
         "emissaryAuthenticationStrategy": "FormStandard",
@@ -44,8 +44,7 @@
       "type": "tlsScanner",
       "id": "NA",
       "attributes": {
-        "tlsScannerSeverity": "LOW",
-        "alertThreshold": 3
+        "tlsScannerSeverity": "LOW"
       }
     },
     {
@@ -61,8 +60,7 @@
         "username": "<your-user>",
         "passwordBase64": "<your-base64-encoded-password>",
         "aScannerAttackStrength": "HIGH",
-        "aScannerAlertThreshold": "LOW",
-        "alertThreshold": 12
+        "aScannerAlertThreshold": "LOW"
       },
       "relationships": {
         "data": [{
